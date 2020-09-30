@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blood-Sugar Monitor</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="values">
+            <div class="sugar" id="currentSugar">
+                ---
+            </div>
+            <div>
+                <div class="difference" id="sugarDifference"></div>
+                <div class="unit">
+                    mg/dl
+                </div>
+            </div>
+        </div>
+        <div class="direction" id="directionIndicator">
+            <i class="arrow-right" id="arrowIndicator"></i>
+        </div>
+    </div>
+
+    <script type="module" src="../assets/js/index.js"></script>
+</body>
+</html>
