@@ -1,0 +1,70 @@
+.container {
+    position: relative;
+    width: 365px;
+    padding:15px;
+    height: 370px;
+    background-color: #272727;
+}
+
+.form-group {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+
+.form-group:last-child {
+    margin: 0;
+}
+
+.form-group label {
+    display: block;
+    margin: 0 0 10px;
+    color: rgba(175, 175, 175, 0.75);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.form-group input {
+    outline: none;
+    display: block;
+    background: rgba(135, 135, 135, 0.1);
+    width: 100%;
+    border: 1px solid #272727;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: rgba(175, 175, 175, 0.7);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus {
+    color: rgba(175, 175, 175, 0.9);
+    border: 1px solid;
+}
+
+.form-group button {
+    outline: none;
+    background: transparent;
+    width: 100%;
+    border: 1px solid rgba(175, 175, 175, 0.5);
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: rgba(175, 175, 175, 0.75);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+}

@@ -10,7 +10,25 @@
     </head>
     <body>
         <div class="container">
-            <h1>Einstellungen</h1>
+            <form>
+                <div class="form-group">
+                    <label for="url">Nightscout URL</label>
+                    <input type="text" id="url" name="url"/>
+                </div>
+                <div class="form-group">
+                    <label for="token">Nightscout token</label>
+                    <input type="text" id="token" name="token"/>
+                </div>
+                <div class="form-group">
+                    <label for="interval">Refresh interval</label>
+                    <input type="number" id="interval" name="interval"/>
+                </div>
+                <div class="form-group">
+                    <button id="save">Save</button>
+                </div>
+            </form>
+
+
         </div>
 
         <script type="module" src="../assets/js/settings.js"></script>

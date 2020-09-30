@@ -28,11 +28,11 @@ function createWindow () {
         if (!settingsWindow) {
             createSettingsWindow();
         }
-    })
+    });
 
     ipcMain.on('quitApplication', (event) => {
         app.quit()
-    })
+    });
 }
 
 function createSettingsWindow () {
@@ -43,7 +43,11 @@ function createSettingsWindow () {
         frame: true,
         resizable: false,
         minimizable: false,
-        fullscreenable: false
+        fullscreenable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            enableRemoteModule: true
+        }
     });
     settingsWindow.setMenu(null);
     settingsWindow.loadFile('views/settings.html');
@@ -51,7 +55,11 @@ function createSettingsWindow () {
 
     settingsWindow.on('closed', () => {
         settingsWindow = null;
-    })
+    });
+
+    ipcMain.on('closeSettings', (event) => {
+        settingsWindow.close();
+    });
 }
 
 app.whenReady().then(createWindow);
@@ -60,10 +68,10 @@ app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit()
     }
-})
+});
 
 app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
         createWindow()
     }
-})
+});

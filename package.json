@@ -3,7 +3,6 @@
   "productName": "nightscoutDesktopClient",
   "version": "1.0.0",
   "description": "An App which displays your bloodsugar based on nightscout API on your Desktop",
-  "author": "Christian Förster",
   "author": {
     "name": "Christian Förster",
     "email": "christian@cfserver.de",
@@ -22,7 +21,6 @@
     "bloodsugar",
     "electron"
   ],
-
   "devDependencies": {
     "electron": "^10.1.2"
   },
